@@ -6,7 +6,7 @@ import org.apache.spark.sql.SQLContext
 
 object JsonReader extends SparkUtil{
   def main(args: Array[String]): Unit = {
-    val sc = createSparkContext()
+    val sc = getInstance()
     val sqlContext = new SQLContext(sc)
     val people = sqlContext.read.json("hdfs://127.0.0.1:9000/spark/people.json")
     people.show()

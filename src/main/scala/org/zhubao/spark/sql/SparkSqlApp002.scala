@@ -8,7 +8,7 @@ import org.zhubao.spark.SparkUtil
 
 object SparkSqlApp002 extends SparkUtil{
   def main(args: Array[String]): Unit = {
-    val sc = createSparkContext();
+    val sc = getInstance();
     val sqlContext = new SQLContext(sc)
     import sqlContext.implicits._
     val banks = sc.textFile("hdfs://127.0.0.1:9000/spark/bank.csv")

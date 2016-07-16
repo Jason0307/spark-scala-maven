@@ -37,6 +37,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- spark dependencies -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-core_2.11</artifactId>
@@ -47,13 +48,26 @@
 			<artifactId>spark-sql_2.11</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_2.11</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-kafka_2.11</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 		<dependency>
 			<groupId>com.databricks</groupId>
 			<artifactId>spark-csv_2.11</artifactId>
 			<version>1.2.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.scalatest</groupId>
@@ -61,6 +75,14 @@
 			<version>3.0.0-M15</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- fastjson lib -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.13</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

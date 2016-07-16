@@ -4,9 +4,15 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 
 class SparkUtil {
-  def createSparkContext() : SparkContext = {
-    val conf = new SparkConf().setMaster("local").setAppName("App")
-    val sc = new SparkContext(conf)
-    return sc
+  @transient private var instance: SparkContext = _
+  private val conf: SparkConf = new SparkConf()
+    .setMaster("local[2]")
+    .setAppName("myApp")
+
+  def getInstance(): SparkContext = {
+    if (instance == null) {
+      instance = new SparkContext(conf)
+    }
+    instance
   }
 }
